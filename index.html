@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title> </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">	<!-- Displays mobile on mobile -->
+        <link href = "css/bootstrap.min.css" rel = "stylesheet">
+        <script src="https://use.fontawesome.com/501a4c64e1.js"></script>
+        <link href = "css/styles.css" rel = "stylesheet">
+        <!-- Why do we need a google API?  -->
+        <!-- What is jQuery? It's a feature-rich JavaScript library -->
+        <!-- The Google Hosted Libraries is a stable, reliable, high-speed, globally avaiable content distribution
+            network for the most popular, open-source JavaScript libraries -->
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+            <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+            <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+            <script src="js/bootstrap.js"></script>	<!-- Bootstrap api -->
+
+            <script>
+                $(function() {
+                    $( "#dragme1" ).draggable(
+                            {containment: "window"}
+                            );
+
+                });
+            </script>
+
+    </head>
+    <body>
+        <div id ="top"></div>
+        <div class = "container-fluid centerBlock">
+            <img clas = "center" id = "myImage" src = "#" alt = "" />
+            <!--<form action = "isUp.php" method = "GET" class = "text-center">
+                <input type = "text" name = "website" placeholder = "https://youtube.com">
+                <input type = "submit">
+            -->
+
+        </div>
+        <!--<div id="dragme1"> <img class = "smallImage" id = "fb" src= "facebook.png"/> </div>-->
+
+
+
+        <nav class = "navbar navbar-default navbar-fixed-bottom bottomNav">
+            <div class = "container-fluid">
+                <div class="btn-group" role="group" aria-label="...">
+                    <input type = "file" class="btn btn-default" />
+
+                  <button type="button" class="btn btn-default" onclick="merging()" data-toggle="modal" data-target="#modal-rotaract">Merge</button>
+                  <button type="button" class="btn btn-default" onclick = "addPicObj('facebook')"><img class = "imageClass" src="facebook.png"></button>
+                  <button type="button" class="btn btn-default" onclick = "addPicObj('twitter')"><img class = "imageClass" src="twitter.png"></button>
+                  <button type="button" class="btn btn-default" onclick = "addPicObj('vapor1')"><img class = "imageClass" src="vapor1.png"></button>
+                  <button type="button" class="btn btn-default" onclick = "addPicObj('vapor2')"><img class = "imageClass" src="vapor2.png"></button>
+                  <button type="button" class="btn btn-default" onclick = "addPicObj('vapor3')"><img class = "imageClass" src="vapor3.png"></button>
+                  <button type="button" class="btn btn-default" onclick = "addPicObj('vapor4')"><img class = "imageClass" src="vapor4.png"></button>
+                  <button type="button" class="btn btn-default" onclick = "addPicObj('vapor5')"><img class = "imageClass" src="vapor5.png"></button>
+                  <button type="button" class="btn btn-default" onclick = "addPicObj('vapor6')"><img class = "imageClass" src="vapor6.png"></button>
+                  <button type="button" class="btn btn-default" onclick = "addPicObj('vapor7')"><img class = "imageClass" src="vapor7.png"></button>
+                  <button type="button" class="btn btn-default" onclick = "addPicObj('vapor8')"><img class = "imageClass" src="vapor8.png"></button>
+                </div>
+                <!--
+                <button onclick="merging()" data-toggle="modal" data-target="#modal-rotaract">Merge</button> 
+                <button type = "button" onclick = "addPicObj('facebook')"> <img = "imageClass" src="facebook.png"> </button>
+                <button type = "button" onclick = "addPicObj('twitter')"> <img class = "imageClass" src="twitter.png"> </button>
+            -->
+                <!--
+                <ul class = "nav navbar-nav">
+                    <li> <a href = "#projects">Projects</a></li>
+                    <li><a href= "#about">About me</a></li>
+                    <li><a href= "#extra">Extra</a></li>
+                </ul>
+            -->
+            </div>
+        </nav>
+        <!--<div id="dragme"><img src="facebook.png" /></div> -->
+
+        <!-- personal external javascript functions -->
+        <div class = "modal fade" id = "modal-rotaract">
+            <div class = "modal-dialog">
+                <div class = "modal-content">
+
+                    <!-- BODY -->
+                    <div class = "modal-body">
+                        <canvas id="myCanvas" style="border:1px solid #d3d3d3;">
+                    </div>
+
+                    <!-- FOOTER -->
+                    <div class = "modal-footer">
+                        <!-- data-dismiss is basically ending the data from this "modal" -->
+                        <a class = "btn btn-default" data-dismiss = "modal"> Close </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <script src="js/myScript.js"></script>
+
+        <script>
+
+/* (selector).change() Triggers the change event for the selected element */
+$("input").change(
+
+        /* Reads in the file and loads it into the myImage element*/
+        function () {
+
+            /* Checks if the file property exists and checks if we have at least
+             * one file
+             */
+            if(this.files && this.files[0]){
+                var reader = new FileReader();
+                reader.onload = loadImage;
+
+                /* readAsDataUrl -- Starts reading the contents of the specified 
+                 * Blob, once finished, the result attribute contains a data: URL
+                 * representing the file's data. 
+                 */
+                reader.readAsDataURL(this.files[0]);
+            }
+        }
+        );
+
+/* loads the image onto the element*/
+function loadImage(e) {
+    /* (selector).attr(attribute,value)   Sets the attribute and value */
+    $('#myImage').attr('src', e.target.result);
+}
+
+
+        </script>
+
+
+
+
+
+    </body>
+</html>
