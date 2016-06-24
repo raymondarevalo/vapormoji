@@ -41,58 +41,73 @@
 
 
         <nav class = "navbar navbar-default navbar-fixed-bottom bottomNav">
-            <div class = "container-fluid">
-                <div class="btn-group" role="group" aria-label="...">
-                    <input type = "file" class="btn btn-default" />
 
-                  <button type="button" class="btn btn-default" onclick="merging()" data-toggle="modal" data-target="#modal-rotaract">Merge</button>
-                  <button type="button" class="btn btn-default" onclick = "addPicObj('facebook')"><img class = "imageClass" src="facebook.png"></button>
-                  <button type="button" class="btn btn-default" onclick = "addPicObj('twitter')"><img class = "imageClass" src="twitter.png"></button>
-                  <button type="button" class="btn btn-default" onclick = "addPicObj('vapor1')"><img class = "imageClass" src="vapor1.png"></button>
-                  <button type="button" class="btn btn-default" onclick = "addPicObj('vapor2')"><img class = "imageClass" src="vapor2.png"></button>
-                  <button type="button" class="btn btn-default" onclick = "addPicObj('vapor3')"><img class = "imageClass" src="vapor3.png"></button>
-                  <button type="button" class="btn btn-default" onclick = "addPicObj('vapor4')"><img class = "imageClass" src="vapor4.png"></button>
-                  <button type="button" class="btn btn-default" onclick = "addPicObj('vapor5')"><img class = "imageClass" src="vapor5.png"></button>
-                  <button type="button" class="btn btn-default" onclick = "addPicObj('vapor6')"><img class = "imageClass" src="vapor6.png"></button>
-                  <button type="button" class="btn btn-default" onclick = "addPicObj('vapor7')"><img class = "imageClass" src="vapor7.png"></button>
-                  <button type="button" class="btn btn-default" onclick = "addPicObj('vapor8')"><img class = "imageClass" src="vapor8.png"></button>
-                </div>
-                <!--
-                <button onclick="merging()" data-toggle="modal" data-target="#modal-rotaract">Merge</button> 
-                <button type = "button" onclick = "addPicObj('facebook')"> <img = "imageClass" src="facebook.png"> </button>
-                <button type = "button" onclick = "addPicObj('twitter')"> <img class = "imageClass" src="twitter.png"> </button>
-            -->
-                <!--
-                <ul class = "nav navbar-nav">
-                    <li> <a href = "#projects">Projects</a></li>
-                    <li><a href= "#about">About me</a></li>
-                    <li><a href= "#extra">Extra</a></li>
-                </ul>
-            -->
-            </div>
-        </nav>
-        <!--<div id="dragme"><img src="facebook.png" /></div> -->
 
-        <!-- personal external javascript functions -->
-        <div class = "modal fade" id = "modal-rotaract">
-            <div class = "modal-dialog">
-                <div class = "modal-content">
-
-                    <!-- BODY -->
-                    <div class = "modal-body">
-                        <canvas id="myCanvas" style="border:1px solid #d3d3d3;">
-                    </div>
-
-                    <!-- FOOTER -->
-                    <div class = "modal-footer">
-                        <!-- data-dismiss is basically ending the data from this "modal" -->
-                        <a class = "btn btn-default" data-dismiss = "modal"> Close </a>
-                    </div>
-                </div>
-            </div>
+        <div class = "pp col-xs-3 col-sm-2 col-md-2 col-lg-2 ">
+            
+                    <input type="file" name="file" id="file" class="inputfile" />
+                    <label for="file">Choose a file</label>
+            
         </div>
 
 
+       <div class = "col-xs-3 col-sm-2 col-md-2 col-lg-2 pp">
+                             
+                    <a type="button" class="btn btn-default jj" id="download"><label>Save</label></a>
+
+            
+        </div>
+
+
+        <div class="col-xs-6 col-sm-8 col-md-8 col-lg-8 emojiCat">
+            <div class = "btn-group bgroup">
+
+
+
+                <button type = "button" onclick = "addPicObj('vapor1')"><img class = "imageClass" src="emojis/vapor1.png"></button>
+                <button type = "button" onclick = "addPicObj('vapor2')"><img class = "imageClass" src="emojis/vapor2.png"></button>
+                <button type = "button" onclick = "addPicObj('vapor3')"><img class = "imageClass" src="emojis/vapor3.png"></button>
+                <button type = "button" onclick = "addPicObj('vapor4')"><img class = "imageClass" src="emojis/vapor4.png"></button>
+                <button type = "button" onclick = "addPicObj('vapor5')"><img class = "imageClass" src="emojis/vapor5.png"></button>
+                <button type = "button" onclick = "addPicObj('vapor6')"><img class = "imageClass" src="emojis/vapor6.png"></button>
+                <button type = "button" onclick = "addPicObj('vapor7')"><img class = "imageClass" src="emojis/vapor7.png"></button>
+                <button type = "button" onclick = "addPicObj('vapor8')"><img class = "imageClass" src="emojis/vapor8.png"></button>
+                <button type = "button" onclick = "addPicObj('vapor9')"><img class = "imageClass" src="emojis/vapor9.png"></button>
+                <button type = "button" onclick = "addPicObj('vapor10')"><img class = "imageClass" src="emojis/vapor10.png"></button>
+                <button type = "button" onclick = "addPicObj('vapor11')"><img class = "imageClass" src="emojis/vapor11.png"></button>
+                <button type = "button" onclick = "addPicObj('vapor12')"><img class = "imageClass" src="emojis/vapor12.png"></button>
+                <button type = "button" onclick = "addPicObj('vapor13')"><img class = "imageClass" src="emojis/vapor13.png"></button>
+                <button type = "button" onclick = "addPicObj('vapor14')"><img class = "imageClass" src="emojis/vapor14.png"></button>
+                <button type = "button" onclick = "addPicObj('vapor15')"><img class = "imageClass" src="emojis/vapor15.png"></button>
+                <button type = "button" onclick = "addPicObj('vapor16')"><img class = "imageClass" src="emojis/vapor16.png"></button>
+                <button type = "button" onclick = "addPicObj('vapor17')"><img class = "imageClass" src="emojis/vapor17.png"></button>
+                <button type = "button" onclick = "addPicObj('vapor18')"><img class = "imageClass" src="emojis/vapor18.png"></button>
+                <button type = "button" onclick = "addPicObj('vapor19')"><img class = "imageClass" src="emojis/vapor19.png"></button>
+                <button type = "button" onclick = "addPicObj('vapor20')"><img class = "imageClass" src="emojis/vapor20.png"></button>
+                <button type = "button" onclick = "addPicObj('vapor21')"><img class = "imageClass" src="emojis/vapor21.png"></button>
+                <button type = "button" onclick = "addPicObj('vapor22')"><img class = "imageClass" src="emojis/vapor22.png"></button>
+                <button type = "button" onclick = "addPicObj('vapor23')"><img class = "imageClass" src="emojis/vapor23.png"></button>
+                <button type = "button" onclick = "addPicObj('vapor24')"><img class = "imageClass" src="emojis/vapor24.png"></button>
+                <button type = "button" onclick = "addPicObj('vapor25')"><img class = "imageClass" src="emojis/vapor25.png"></button>
+                <button type = "button" onclick = "addPicObj('vapor26')"><img class = "imageClass" src="emojis/vapor26.png"></button>
+                <button type = "button" onclick = "addPicObj('vapor27')"><img class = "imageClass" src="emojis/vapor27.png"></button>
+                <button type = "button" onclick = "addPicObj('vapor28')"><img class = "imageClass" src="emojis/vapor28.png"></button>
+                <button type = "button" onclick = "addPicObj('vapor29')"><img class = "imageClass" src="emojis/vapor29.png"></button>
+                <button type = "button" onclick = "addPicObj('vapor30')"><img class = "imageClass" src="emojis/vapor30.png"></button>
+                <button type = "button" onclick = "addPicObj('vapor31')"><img class = "imageClass" src="emojis/vapor31.png"></button>
+                <button type = "button" onclick = "addPicObj('vapor32')"><img class = "imageClass" src="emojis/vapor32.png"></button>
+
+
+
+            </div>
+        </div>
+    
+
+            
+        </nav>
+        <!--<div id="dragme"><img src="facebook.png" /></div> -->
+
+        <canvas id="myCanvas" style="border:1px solid #d3d3d3;">
         <script src="js/myScript.js"></script>
 
         <script>

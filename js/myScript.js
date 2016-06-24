@@ -90,35 +90,79 @@ function addDiv(currIndex) {
 /* Sets the src of the image */
 function setImageSrc(currPicture) {
 	switch(currPicture) {
-		case "facebook":
-			return "facebook.png";
-
-		case "twitter":
-			return "twitter.png";
 
 		case "vapor1":
-			return "vapor1.png";
-
+			return "emojis/vapor1.png";
 		case "vapor2":
-			return "vapor2.png";
-
+			return "emojis/vapor2.png";
 		case "vapor3":
-			return "vapor3.png";
-
+			return "emojis/vapor3.png";		
 		case "vapor4":
-			return "vapor4.png";
-
+			return "emojis/vapor4.png";
 		case "vapor5":
-			return "vapor5.png";
-
+			return "emojis/vapor5.png";
 		case "vapor6":
-			return "vapor6.png";
-
+			return "emojis/vapor6.png";
 		case "vapor7":
-			return "vapor7.png";
-			
+			return "emojis/vapor7.png";
 		case "vapor8":
-			return "vapor8.png";
+			return "emojis/vapor8.png";
+		case "vapor9":
+			return "emojis/vapor9.png";
+		case "vapor10":
+			return "emojis/vapor10.png";
+		case "vapor11":
+			return "emojis/vapor11.png";		
+		case "vapor12":
+			return "emojis/vapor12.png";
+		case "vapor13":
+			return "emojis/vapor13.png";
+		case "vapor14":
+			return "emojis/vapor14.png";
+		case "vapor15":
+			return "emojis/vapor15.png";
+		case "vapor16":
+			return "emojis/vapor16.png";
+		case "vapor17":
+			return "emojis/vapor17.png";
+		case "vapor18":
+			return "emojis/vapor18.png";
+		case "vapor19":
+			return "emojis/vapor19.png";
+		case "vapor20":
+			return "emojis/vapor20.png";		
+		case "vapor21":
+			return "emojis/vapor21.png";
+		case "vapor22":
+			return "emojis/vapor22.png";
+		case "vapor23":
+			return "emojis/vapor23.png";
+		case "vapor24":
+			return "emojis/vapor24.png";
+		case "vapor25":
+			return "emojis/vapor25.png";
+		case "vapor26":
+			return "emojis/vapor26.png";
+		case "vapor27":
+			return "emojis/vapor27.png";
+		case "vapor28":
+			return "emojis/vapor28.png";
+		case "vapor29":
+			return "emojis/vapor29.png";		
+		case "vapor30":
+			return "emojis/vapor30.png";
+		case "vapor31":
+			return "emojis/vapor31.png";
+		case "vapor32":
+			return "emojis/vapor32.png";
+		case "vapor33":
+			return "emojis/vapor33.png";
+		case "vapor34":
+			return "emojis/vapor34.png";
+		case "vapor35":
+			return "emojis/vapor35.png";
+		case "vapor36":
+			return "emojis/vapor36.png";
 
 	}
 }
@@ -127,6 +171,7 @@ function setImageSrc(currPicture) {
 
 
 		function merging() {
+			console.log("Enters merging()");
 
 			document.getElementById("myCanvas").width = document.getElementById("myImage").width;
 			document.getElementById("myCanvas").height = document.getElementById("myImage").height;
@@ -183,8 +228,38 @@ function setImageSrc(currPicture) {
 
 	    		ctx.drawImage(picture, sx, sy, swidth, sheight, xx, yy, swidth, sheight);
 
+	    		/*
+	    		var canvass = document.getElementById("myCanvas");
+				var dataURL = canvas.toDataURL('image/png');
+    			canvass.href = dataURL;
+    			*/
+
+
     		}
-    		   		
+    	}
+
+			function downloadCanvas(link, canvasId, filename) {
+				console.log("Enters downloadCanvas");
+			    link.href = document.getElementById(canvasId).toDataURL();
+			    link.download = filename;
+			}
+
+			
+    		document.getElementById('download').addEventListener('click', function() {
+    			console.log("Enter here");
+    			merging();
+			    downloadCanvas(this, 'myCanvas', 'test.png');
+			}, false);
+
+			
+			/*
+			function hh() {
+				console.log("Enters downloadThis");
+				merging();
+				downloadCanvas(this, 'myCanvas', 'test.png');
+			}
+			*/
+			    		   		
 
 
-		}
+		

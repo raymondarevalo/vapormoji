@@ -1,10 +1,12 @@
 html, body {
 	background-color: grey;
 	height: 100%;
+	width: 100%;
 }
 
 
 .centerBlock{
+	z-index: 2;
   display: flex;
 
   height: 100%;
@@ -50,8 +52,10 @@ button {
 }
 
 .bottomNav {
+	z-index: 1;
 	border: none;
 	margin: none;
+	overflow: visible;
 }
 
 .uhh {
@@ -62,8 +66,89 @@ button {
 }
 input {
 
-	height: 50px;
+	height: 100px;
 	border: none;
 	margin: none;
 
 }
+
+
+.emojiCat{
+	overflow-x:scroll;
+    overflow-y:hidden;
+    height:100%;
+
+}
+
+.bgroup {
+	white-space:nowrap;
+}
+
+.yo {
+	height: 100%;
+	border: none;
+}
+
+.goo {
+	z-index: 1;
+}
+
+.imgModal {
+	margin: auto;
+	min-width: 100px;
+	display: none;
+
+}
+
+.modal {
+	
+	display: none;
+}
+
+canvas {
+	display: none;
+}
+
+.jj {
+	
+	width: 100%;
+	height: 55px;
+
+}
+
+.pp {
+
+	margin: none;
+	border: none;
+	height: 55px;
+}
+
+
+
+.inputfile {
+	border: none;
+	margin: none;
+	width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+}
+
+
+
+.inputfile + label {
+	text-align: center;
+    font-size: 1.25em;
+    font-weight: 700;
+    height: 55px;
+    width: 100%;
+    color: white;
+    background-color: black;
+    display: inline-block;
+}
+
+
+
+
